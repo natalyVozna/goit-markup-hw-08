@@ -1,9 +1,4 @@
 .clients {
-  &__list {
-    display: flex;
-    gap: 30px;
-  }
-
   &__item {
     width: calc((100% - 150px) / 6);
   }
