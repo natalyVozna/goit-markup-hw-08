@@ -1,3 +1,11 @@
+.section-works {
+  display: none;
+
+  @include media-min($desktop) {
+    display: block;
+  }
+}
+
 .works {
   &__item {
     position: relative;

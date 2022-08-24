@@ -1,23 +1,26 @@
 .form-footer {
-  display: flex;
-  align-items: flex-end;
+  @include media-min($desktop) {
+    display: flex;
+    align-items: flex-end;
+  }
 
   &__field {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 212px);
-    margin-right: 12px;
-  }
+    @include media-max(1199px) {
+      display: block;
+      margin-bottom: 20px;
+    }
 
-  &__input:focus {
-    border: 1px solid $accent-color;
-  }
-
-  &__input::placeholder {
-    color: rgba(#fff, 0.6);
+    @include media-min($desktop) {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 212px);
+      margin-right: 12px;
+    }
   }
 
   &__btn {
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 28px;
     height: 50px;
     width: 200px;
@@ -36,15 +39,13 @@
   }
 }
 
-.input-footer {
-  cursor: pointer;
+.form-footer__input {
   margin: 0;
   padding: 15px 16px 15px 16px;
   height: 50px;
   width: 100%;
-  margin-right: 12px;
-  color: $white-color;
 
+  color: $white-color;
   background-color: transparent;
   font: inherit;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -52,38 +53,54 @@
   border-radius: 4px;
 
   transition: border 250ms $timing-function;
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &__input::placeholder {
+    color: rgba(#fff, 0.6);
+  }
+
+  @include media-min($desktop) {
+    margin-right: 12px;
+  }
 }
 
-/* .input-footer:hover, */
-.input-footer:focus {
-  border: 1px solid $accent-color;
-}
+// .form-footer {
+//   // display: flex;
+//   // align-items: flex-end;
 
-.input-footer::placeholder {
-  color: rgba(#fff, 0.6);
-}
+//   &__field {
+//     // display: flex;
+//     // flex-direction: column;
+//     // width: calc(100% - 212px);
+//     // margin-right: 12px;
+//   }
 
-.footer-field {
-  display: flex;
-  flex-direction: column;
-  width: calc(100% - 212px);
-  margin-right: 12px;
-}
+//   &__input:focus {
+//     border: 1px solid $accent-color;
+//   }
 
-.button.footer-btn {
-  padding: 0 28px;
-  height: 50px;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+//   &__input::placeholder {
+//     color: rgba(#fff, 0.6);
+//   }
 
-  line-height: 1.87;
-}
+//   &__btn {
+//     padding: 0 28px;
+//     height: 50px;
+//     width: 200px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
 
-.icon-send {
-  margin-left: 12px;
-  width: 24px;
-  height: 24px;
-  fill: $white-color;
-}
+//     line-height: 1.87;
+//   }
+
+//   &__icon {
+//     margin-left: 12px;
+//     width: 24px;
+//     height: 24px;
+//     fill: $white-color;
+//   }
+// }

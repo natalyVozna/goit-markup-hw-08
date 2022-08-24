@@ -49,29 +49,77 @@ img {
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  // max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include media-min($mobile) {
+    width: $mobile;
+  }
+  @include media-min($tablet) {
+    width: $tablet;
+  }
+  @include media-min($desktop) {
+    width: $desktop;
+  }
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+
+  @include media-min($desktop) {
+    padding: 94px 0;
+  }
 }
 
 .row {
-  display: flex;
-  gap: 30px;
+  @include media-min($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.col {
+  @include media-max(1199px) {
+    text-align: center;
+  }
+
+  &:not(:last-child) {
+    @include media-max(1199px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 50%;
+    }
+  }
+
+  &:last-child {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 100%;
+      max-width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: $title-text;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include media-min($desktop) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
 }

@@ -1,9 +1,18 @@
 .advantages {
-  padding-bottom: 0;
+  @include media-max(767px) {
+    &__item + &__item {
+      margin-top: 30px;
+    }
+  }
 
   &__item {
-    //   width: 270px;
-    width: calc((100% - 90px) / 4);
+    @include media-min($tablet) {
+      width: calc((100% - 30px) / 2);
+    }
+
+    @include media-min($desktop) {
+      width: calc((100% - 90px) / 4);
+    }
   }
 
   &__icon-box {
@@ -13,6 +22,8 @@
     height: 120px;
     width: 100%;
     background-color: $secondary-bg;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 30px;
     border-radius: 4px;
   }
@@ -23,13 +34,18 @@
   }
 
   &__title {
+    margin-bottom: 10px;
+
     color: $title-text;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 10px;
+
+    @include media-max(767px) {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -39,26 +55,3 @@
     letter-spacing: 0.03em;
   }
 }
-
-.advantages .item {
-  width: 270px;
-  /* width: calc((100% - 90) / 4); */
-}
-
-.advantages .item:not(:last-child) {
-  margin-right: 30px;
-}
-
-/* SVG через ::before  */
-/* .advantages .item::before {
-  display: block;
-  content: '';
-  height: 120px;
-  background-size: 70px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: var(--secondary-bg-color);
-  background-image: url('../images/antenna.svg');
-  margin-bottom: 30px;
-  border-radius: 4px;
-} */

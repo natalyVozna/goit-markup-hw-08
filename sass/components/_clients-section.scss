@@ -1,6 +1,18 @@
 .clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
   &__item {
-    width: calc((100% - 150px) / 6);
+    width: calc((100% - 30px) / 2);
+
+    @include media-min($tablet) {
+      width: calc((100% - 60px) / 3);
+    }
+
+    @include media-min($desktop) {
+      width: calc((100% - 150px) / 6);
+    }
   }
 
   &__icon {
