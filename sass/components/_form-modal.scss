@@ -44,17 +44,6 @@
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: $primary-text;
-
-  &--checkbox {
-    display: flex;
-    margin-bottom: 0;
-
-    align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: $primary-text;
-  }
 }
 
 .form-popup__input {
@@ -120,11 +109,27 @@
   }
 }
 
-.form-popup__link {
-  color: $accent-color;
+.form-popup__label--checkbox {
+  display: flex;
+  margin-bottom: 0;
 
-  &:hover {
-    text-decoration: none;
+  font-size: 12px;
+  line-height: 1.17;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: $primary-text;
+
+  @include media-min($desktop) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  a {
+    color: $accent-color;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 

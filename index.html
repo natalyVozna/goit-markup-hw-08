@@ -18,14 +18,31 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
       <div class="container header__container">
         <nav class="header__nav navigation">
-          <a class="logo" href="./index.html"><span class="logo--blue">Web</span>Studio</a>
+          <a class="logo logo--black" href="./index.html"> Web<span>Studio</span></a>
+
+          <button
+            type="button"
+            class="navigation__btn"
+            aria-label="Mobile menu switch"
+            aria-controls="menu-container"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg class="navigation__icon">
+              <use class="navigation__icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="navigation__icon-cross" href="./images/icons.svg#icon-cross"></use>
+            </svg>
+          </button>
+
+          <div class="menu-container" id="menu-container" data-menu></div>
+
           <ul class="navigation__list list">
             <li class="navigation__item">
               <a class="navigation__link navigation__link--current" href="./index.html">Студія</a>
@@ -356,7 +373,7 @@
       </section>
 
       <!-- Modal window -->
-      <div class="backdrop backdrop--is-hidden" data-modal>
+      <div class="backdrop is-hidden" data-modal>
         <div class="popup">
           <button data-modal-close class="popup__close-btn btn-reset" type="button">
             <svg class="popup__close-icon">
@@ -408,7 +425,7 @@
                   />
                   <span class="form-popup__check-icon"></span>
                   Погоджуюся з розсилкою та приймаю&nbsp;
-                  <a href="/" class="form-popup__link">Умови договору</a>
+                  <a href="/">Умови договору</a>
                 </label>
               </div>
 
@@ -424,9 +441,7 @@
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer__col-contact col">
-          <a class="logo logo--white" href="./index.html"
-            ><span class="logo--blue">Web</span>Studio</a
-          >
+          <a class="logo logo--white" href="./index.html">Web<span>Studio</span></a>
           <address class="contact">
             <ul class="contact__list list">
               <li class="contact__item">
@@ -500,5 +515,6 @@
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

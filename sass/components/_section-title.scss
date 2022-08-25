@@ -1,0 +1,16 @@
+.section-title {
+  margin-bottom: 30px;
+
+  color: $title-text;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  @include media-min($desktop) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
+}
