@@ -1,9 +1,7 @@
 .advantages {
-  @include media-max(767px) {
-    &__item + &__item {
-      margin-top: 30px;
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 
   &__item {
     @include media-min($tablet) {

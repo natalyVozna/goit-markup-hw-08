@@ -10,20 +10,20 @@ body.modal-open {
   overflow: hidden;
 }
 
-.list {
-  list-style: none;
-}
-
-.link {
-  text-decoration: none;
-}
-
 .section {
   padding: 60px 0;
 
   @include media-min($desktop) {
     padding: 94px 0;
   }
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
 }
 
 .row {
@@ -63,7 +63,4 @@ body.modal-open {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-}
-
-.is-open {
 }

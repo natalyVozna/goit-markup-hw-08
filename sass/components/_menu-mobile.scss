@@ -1,22 +1,75 @@
 .menu-container {
-  display: none;
-  padding: 48px 40px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #ffffff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 3px rgba(0, 0, 0, 0.16);
-
   color: $title-text;
   font-weight: 500;
   font-size: 40px;
-  line-height: (16 / 14);
+  line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 
-  &.is-open {
-    display: flex;
+  @include media-max(676px) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 48px 40px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &.is-open {
+      display: block;
+    }
   }
+
+  @include media-min($tablet) {
+    justify-content: space-between;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  @include media-min($desktop) {
+    //     justify-content: space-between;
+    // display: flex;
+    // flex-grow: 1;
+    // align-items: center;
+  }
+}
+
+.menu__btn {
+  display: inline-flex;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+
+  @include media-min($tablet) {
+    display: none;
+  }
+}
+
+.menu__icon {
+  width: 40px;
+  height: 40px;
+  fill: $title-text;
+}
+
+.menu__icon-cross {
+  display: none;
+
+  .menu__btn.is-open & {
+    display: block;
+  }
+}
+
+.menu__btn.is-open .menu__icon-menu {
+  display: none;
 }

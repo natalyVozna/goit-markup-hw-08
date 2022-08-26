@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Studio</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,53 +21,56 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <nav class="header__nav navigation">
-          <a class="logo logo--black" href="./index.html"> Web<span>Studio</span></a>
+        <a class="logo logo--black" href="./index.html"> Web<span>Studio</span></a>
+        <div class="header__main-menu">
+          <nav class="header__nav">
+            <ul class="navigation list">
+              <li class="navigation__item">
+                <a class="navigation__link navigation__link--current" href="./index.html">Студія</a>
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link" href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="navigation__item"><a class="navigation__link" href="/">Контакти</a></li>
+            </ul>
+          </nav>
 
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:mango@mail.pig">
+                <svg class="contacts__icon contacts__icon--meil">
+                  <use href="./images/icons.svg#icon-meil"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+1112223344">
+                <svg class="contacts__icon contacts__icon--smartphone">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="header__mobile-menu">
           <button
             type="button"
-            class="navigation__btn"
+            class="menu__btn"
             aria-label="Mobile menu switch"
             aria-controls="menu-container"
             aria-expanded="false"
             data-menu-button
           >
-            <svg class="navigation__icon">
-              <use class="navigation__icon-menu" href="./images/icons.svg#icon-menu"></use>
-              <use class="navigation__icon-cross" href="./images/icons.svg#icon-cross"></use>
+            <svg class="menu__icon">
+              <use class="menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="menu__icon-cross" href="./images/icons.svg#icon-cross"></use>
             </svg>
           </button>
-
-          <div class="menu-container" id="menu-container" data-menu></div>
-
-          <ul class="navigation__list list">
-            <li class="navigation__item">
-              <a class="navigation__link navigation__link--current" href="./index.html">Студія</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="navigation__item"><a class="navigation__link" href="/">Контакти</a></li>
-          </ul>
-        </nav>
-        <ul class="header-contacts list">
-          <li class="header-contacts__item">
-            <a class="header-contacts__link" href="mailto:mango@mail.pig">
-              <svg class="header-contacts__icon header-contacts__icon--meil">
-                <use href="./images/icons.svg#icon-meil"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header-contacts__item">
-            <a class="header-contacts__link" href="tel:+1112223344">
-              <svg class="header-contacts__icon header-contacts__icon--smartphone">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <div class="menu-container" id="menu-container" data-menu hidden>Content</div>
+        </div>
       </div>
     </header>
     <main>
@@ -165,7 +165,7 @@
       </section>
 
       <!-- section team -->
-      <section class="section team">
+      <section class="section section-team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team row list">

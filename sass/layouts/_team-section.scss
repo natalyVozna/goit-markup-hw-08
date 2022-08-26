@@ -1,9 +1,17 @@
-.team {
+.section-team {
   background-color: $secondary-bg;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 
   &__img {
     width: 100%;
     display: block;
+    height: auto;
+    max-width: 100%;
   }
 
   &__box {
@@ -45,11 +53,5 @@
 
   @include media-min($desktop) {
     width: calc((100% - 90px) / 4);
-  }
-
-  &:not(:last-child) {
-    @include media-max(767px) {
-      margin-bottom: 30px;
-    }
   }
 }
