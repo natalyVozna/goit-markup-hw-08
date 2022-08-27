@@ -55,21 +55,69 @@
           </ul>
         </div>
 
-        <div class="header__mobile-menu">
+        <!-------- Mobile-menu -------->
+        <div class="mobile-menu">
           <button
             type="button"
-            class="menu__btn"
+            class="mobile-menu__btn"
             aria-label="Mobile menu switch"
             aria-controls="menu-container"
             aria-expanded="false"
             data-menu-button
           >
-            <svg class="menu__icon">
-              <use class="menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
-              <use class="menu__icon-cross" href="./images/icons.svg#icon-cross"></use>
+            <svg class="mobile-menu__icon">
+              <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
+              <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-cross"></use>
             </svg>
           </button>
-          <div class="menu-container" id="menu-container" data-menu hidden>Content</div>
+          <div class="mobile-menu__container" id="menu-container" data-menu hidden>
+            <nav class="mobile-menu__nav">
+              <ul class="navigation list">
+                <li class="navigation__item">
+                  <a class="navigation__link navigation__link--current" href="./index.html"
+                    >Студія</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="./portfolio.html">Портфоліо</a>
+                </li>
+                <li class="navigation__item"><a class="navigation__link" href="/">Контакти</a></li>
+              </ul>
+            </nav>
+
+            <ul class="contacts list">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--color" href="tel:+1112223344">
+                  <svg class="contacts__icon contacts__icon--smartphone">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:mango@mail.pig">
+                  <svg class="contacts__icon contacts__icon--meil">
+                    <use href="./images/icons.svg#icon-meil"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="social-menu list">
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">Instagram</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">Twitter</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">Facebook</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -144,16 +192,30 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="row list">
             <li class="works__item">
-              <img src="./images/work-1.jpg" class="works__img" alt="Studing" />
+              <img
+                srcset="./images/work-1-370.jpg 1x, ./images/work-1-740.jpg 2x"
+                src="./images/work-1-370.jpg"
+                width="370"
+                class="works__img"
+                alt="Studing"
+              />
               <p class="works__title">Десктопні додатки</p>
             </li>
             <li class="works__item">
-              <img src="./images/work-2.jpg" class="works__img" alt="Development a site" />
+              <img
+                srcset="./images/work-2-370.jpg 1x, ./images/work-2-740.jpg 2x"
+                src="./images/work-2-370.jpg"
+                width="370"
+                class="works__img"
+                alt="Development a site"
+              />
               <p class="works__title">Мобільні додатки</p>
             </li>
             <li class="works__item">
               <img
-                src="./images/work-3.jpg"
+                srcset="./images/work-3-370.jpg 1x, ./images/work-3-740.jpg 2x"
+                src="./images/work-3-370.jpg"
+                width="370"
                 class="works__img"
                 alt="Creating a design"
                 width="370"
@@ -170,7 +232,17 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team row list">
             <li class="team__item">
-              <img class="team__img" src="./images/team-1.jpg" alt="Product Designer" />
+              <img
+                srcset="
+                  ./images/team/team-1-270.jpg 270w,
+                  ./images/team/team-1-540.jpg 540w,
+                  ./images/team/team-1-810.jpg 810w
+                "
+                sizes="(min-width: 1200) 25vw, (min-width: 768) 50vw, 100vw"
+                src="./images/team/team-1-270.jpg"
+                class="team__img"
+                alt="Product Designer"
+              />
               <div class="team__box">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__job">Product Designer</p>

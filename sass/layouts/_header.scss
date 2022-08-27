@@ -11,6 +11,10 @@
     }
   }
 
+  // &__nav {
+  //   display: flex;
+  // }
+
   &__main-menu {
     display: none;
 
@@ -26,38 +30,18 @@
       margin-left: 93px;
     }
   }
-
-  &__mobile-menu {
-    @include media-min($tablet) {
-      display: none;
-    }
-  }
-
-  // &__nav {
-  //   // display: flex;
-  // }
-
-  // &__site-nav {
-  //   // display: flex;
-  //   // margin-left: 93px;
-  // }
-  // &__item:not(:last-child) {
-  //   // margin-right: 50px;
-  // }
 }
 
 /*---------------- Contacts header--------------------- */
 .contacts {
-  // display: none;
-
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   @include media-min($tablet) {
-    display: flex;
-    flex-direction: column;
     gap: 10px;
   }
 
   @include media-min($desktop) {
-    // display: flex;
     flex-direction: row;
     gap: 30px;
   }
@@ -74,16 +58,32 @@
   color: $primary-text;
   font-weight: 500;
   font-style: normal;
-  font-size: 12px;
+  font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
 
   transition: color 250ms $timing-function;
 
+  @include media-max(767px) {
+    &--color {
+      color: $accent-color;
+      font-size: 34px;
+    }
+  }
+
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+
+  @include media-min($tablet) {
+    font-size: 12px;
+  }
+
+  @include media-min($desktop) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
