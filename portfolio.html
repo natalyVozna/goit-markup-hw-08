@@ -58,21 +58,84 @@
           </ul>
         </div>
 
-        <div class="header__mobile-menu">
-          <button
-            type="button"
-            class="menu__btn"
-            aria-label="Mobile menu switch"
-            aria-controls="menu-container"
-            aria-expanded="false"
-            data-menu-button
-          >
-            <svg class="menu__icon">
-              <use class="menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
-              <use class="menu__icon-cross" href="./images/icons.svg#icon-cross"></use>
-            </svg>
-          </button>
-          <div class="menu-container" id="menu-container" data-menu hidden>Content</div>
+        <!-------- Mobile-menu -------->
+        <button
+          type="button"
+          class="mobile-menu__btn mobile-menu__btn--open"
+          aria-label="Mobile menu switch"
+          aria-controls="menu-container"
+          aria-expanded="false"
+          data-menu-button-open
+        >
+          <svg class="mobile-menu__icon">
+            <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu is-hidden" data-menu>
+          <div class="container">
+            <button
+              type="button"
+              class="mobile-menu__btn mobile-menu__btn--close"
+              aria-label="Mobile menu switch"
+              aria-controls="menu-container"
+              aria-expanded="false"
+              data-menu-button-close
+            >
+              <svg class="mobile-menu__icon">
+                <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
+            <nav class="mobile-menu__nav">
+              <ul class="navigation list" data-menu-list>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="./index.html">Студія</a>
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link navigation__link--current" href="./portfolio.html"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="/">Контакти</a>
+                </li>
+              </ul>
+            </nav>
+
+            <ul class="contacts list">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__link--color" href="tel:+1112223344">
+                  <svg class="contacts__icon contacts__icon--smartphone">
+                    <use href="./images/icons.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="mailto:mango@mail.pig">
+                  <svg class="contacts__icon contacts__icon--meil">
+                    <use href="./images/icons.svg#icon-meil"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="social-menu list">
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">Instagram</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">Twitter</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">Facebook</a>
+              </li>
+              <li class="social-menu__item">
+                <a class="social-menu__link" href="" target="_blank">LinkedIn</a>
+              </li>
+            </ul>
+            <!-- </div> -->
+          </div>
         </div>
       </div>
     </header>
@@ -309,5 +372,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

@@ -6,7 +6,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-body.modal-open {
+// body.modal-open {
+//   overflow: hidden;
+// }
+.no-scroll {
   overflow: hidden;
 }
 
@@ -63,4 +66,18 @@ body.modal-open {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

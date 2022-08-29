@@ -65,9 +65,13 @@
 
   transition: color 250ms $timing-function;
 
-  @include media-max(767px) {
+  &--color {
+    color: $accent-color;
+    font-size: 27px;
+  }
+
+  @include media-min($mobile) {
     &--color {
-      color: $accent-color;
       font-size: 34px;
     }
   }
@@ -91,6 +95,10 @@
   margin-right: 10px;
 
   fill: currentColor;
+
+  @include media-max(767px) {
+    display: none;
+  }
 
   &--smartphone {
     width: 10px;

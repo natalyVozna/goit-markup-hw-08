@@ -56,23 +56,35 @@
         </div>
 
         <!-------- Mobile-menu -------->
-        <div class="mobile-menu">
-          <button
-            type="button"
-            class="mobile-menu__btn"
-            aria-label="Mobile menu switch"
-            aria-controls="menu-container"
-            aria-expanded="false"
-            data-menu-button
-          >
-            <svg class="mobile-menu__icon">
-              <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
-              <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-cross"></use>
-            </svg>
-          </button>
-          <div class="mobile-menu__container" id="menu-container" data-menu hidden>
+        <button
+          type="button"
+          class="mobile-menu__btn mobile-menu__btn--open"
+          aria-label="Mobile menu switch"
+          aria-controls="menu-container"
+          aria-expanded="false"
+          data-menu-button-open
+        >
+          <svg class="mobile-menu__icon">
+            <use class="mobile-menu__icon-menu" href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu is-hidden" data-menu>
+          <div class="container">
+            <button
+              type="button"
+              class="mobile-menu__btn mobile-menu__btn--close"
+              aria-label="Mobile menu switch"
+              aria-controls="menu-container"
+              aria-expanded="false"
+              data-menu-button-close
+            >
+              <svg class="mobile-menu__icon">
+                <use class="mobile-menu__icon-cross" href="./images/icons.svg#icon-cross"></use>
+              </svg>
+            </button>
             <nav class="mobile-menu__nav">
-              <ul class="navigation list">
+              <ul class="navigation list" data-menu-list>
                 <li class="navigation__item">
                   <a class="navigation__link navigation__link--current" href="./index.html"
                     >Студія</a
@@ -81,7 +93,9 @@
                 <li class="navigation__item">
                   <a class="navigation__link" href="./portfolio.html">Портфоліо</a>
                 </li>
-                <li class="navigation__item"><a class="navigation__link" href="/">Контакти</a></li>
+                <li class="navigation__item">
+                  <a class="navigation__link" href="/">Контакти</a>
+                </li>
               </ul>
             </nav>
 
@@ -117,6 +131,7 @@
                 <a class="social-menu__link" href="" target="_blank">LinkedIn</a>
               </li>
             </ul>
+            <!-- </div> -->
           </div>
         </div>
       </div>
