@@ -247,17 +247,39 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team row list">
             <li class="team__item">
-              <img
-                srcset="
-                  ./images/team/team-1-270.jpg 270w,
-                  ./images/team/team-1-540.jpg 540w,
-                  ./images/team/team-1-810.jpg 810w
-                "
-                sizes="(min-width: 1200) 25vw, (min-width: 768) 50vw, 100vw"
-                src="./images/team/team-1-270.jpg"
-                class="team__img"
-                alt="Product Designer"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/team-1.webp 1x, ./images/team/team-1.webp 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-1.jpg 1x, ./images/team/team-1.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-1-tab.webp 1x, ./images/team/team-1-tab.webp 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-1-tab.jpg 1x, ./images/team/team-1-tab.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-1-mob.webp 1x, ./images/team/team-1-mob.webp 2x"
+                  media="(max-width:767px)"
+                  --
+                />
+                <source
+                  srcset="./images/team/team-1-mob.jpg 1x, ./images/team/team-1-mob.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/team-1-mob.jpg"
+                  class="team__img"
+                  alt="Product Designer"
+                  width="450"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__job">Product Designer</p>
@@ -294,7 +316,40 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./images/team-4.jpg" alt="Frontend Developer" />
+              <picture>
+                <source
+                  srcset="./images/team/team-2.webp 1x, ./images/team/team-2.webp 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-2.jpg 1x, ./images/team/team-2.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-2-tab.webp 1x, ./images/team/team-2-tab.webp 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-2-tab.jpg 1x, ./images/team/team-2-tab.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-2-mob.webp 1x, ./images/team/team-2-mob.webp 2x"
+                  media="(max-width:767px)"
+                  --
+                />
+                <source
+                  srcset="./images/team/team-2-mob.jpg 1x, ./images/team/team-2-mob.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/team-2-mob.jpg"
+                  class="team__img"
+                  alt="Frontend Developer"
+                  width="450"
+                />
+              </picture>
+              <!-- <img class="team__img" src="./images/team-4.jpg" alt="Frontend Developer" /> -->
               <div class="team__box">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__job">Frontend Developer</p>
@@ -331,7 +386,39 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./images/team-3.jpg" alt="Marketing" />
+              <picture>
+                <source
+                  srcset="./images/team/team-3.webp 1x, ./images/team/team-3.webp 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-3.jpg 1x, ./images/team/team-3.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-3-tab.webp 1x, ./images/team/team-3-tab.webp 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-3-tab.jpg 1x, ./images/team/team-3-tab.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-3-mob.webp 1x, ./images/team/team-3-mob.webp 2x"
+                  media="(max-width:767px)"
+                  --
+                />
+                <source
+                  srcset="./images/team/team-3-mob.jpg 1x, ./images/team/team-3-mob.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/team-3-mob.jpg"
+                  class="team__img"
+                  alt="Marketing"
+                  width="450"
+                />
+              </picture>
               <div class="team__box">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__job">Marketing</p>
@@ -368,7 +455,40 @@
               </div>
             </li>
             <li class="team__item">
-              <img class="team__img" src="./images/team-2.jpg" alt="UI Designer" />
+              <picture>
+                <source
+                  srcset="./images/team/team-4.webp 1x, ./images/team/team-4.webp 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-3.jpg 1x, ./images/team/team-4.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="./images/team/team-4-tab.webp 1x, ./images/team/team-4-tab.webp 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-4-tab.jpg 1x, ./images/team/team-4-tab.jpg 2x"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./images/team/team-4-mob.webp 1x, ./images/team/team-4-mob.webp 2x"
+                  media="(max-width:767px)"
+                  --
+                />
+                <source
+                  srcset="./images/team/team-4-mob.jpg 1x, ./images/team/team-4-mob.jpg 2x"
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/team/team-4-mob.jpg"
+                  class="team__img"
+                  alt="UI Designer"
+                  width="450"
+                />
+              </picture>
+              <!-- <img class="team__img" src="./images/team-2.jpg" alt="UI Designer" /> -->
               <div class="team__box">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__job">UI Designer</p>
