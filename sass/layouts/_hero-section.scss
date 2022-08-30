@@ -17,28 +17,28 @@
     text-align: center;
 
     @include retina {
-      background-image: $bg-gradient, url('../../images/hero/hero-bg-mob-2x.jpg');
-      background-image: $bg-gradient, url('../../images/hero/hero-bg-mob-2x.webp');
+      background-image: $bg-gradient, url('../images/hero/hero-bg-mob-2x.jpg');
+      background-image: $bg-gradient, url('../images/hero/hero-bg-mob-2x.webp');
     }
 
     @include media-min($tablet) {
-      background-image: $bg-gradient, url('../../images/hero/hero-bg-tab.jpg');
-      background-image: $bg-gradient, url('../../images/hero/hero-bg-tab.webp');
+      background-image: $bg-gradient, url('../images/hero/hero-bg-tab.jpg');
+      background-image: $bg-gradient, url('../images/hero/hero-bg-tab.webp');
 
       @include retina {
-        background-image: $bg-gradient, url('../../images/hero/hero-bg-tab-2x.jpg');
-        background-image: $bg-gradient, url('../../images/hero/hero-bg-tab-2x.webp');
+        background-image: $bg-gradient, url('../images/hero/hero-bg-tab-2x.jpg');
+        background-image: $bg-gradient, url('../images/hero/hero-bg-tab-2x.webp');
       }
     }
 
     @include media-min($desktop) {
       height: 600px;
-      background-image: $bg-gradient, url('../../images/hero/hero-bg.jpg');
-      background-image: $bg-gradient, url('../../images/hero/hero-bg.webp');
+      background-image: $bg-gradient, url('../images/hero/hero-bg.jpg');
+      background-image: $bg-gradient, url('../images/hero/hero-bg.webp');
 
       @include retina {
-        background-image: $bg-gradient, url('../../images/hero/hero-bg-2x.jpg');
-        background-image: $bg-gradient, url('../../images/hero/hero-bg-2x.webp');
+        background-image: $bg-gradient, url('../images/hero/hero-bg-2x.jpg');
+        background-image: $bg-gradient, url('../images/hero/hero-bg-2x.webp');
       }
     }
   }
