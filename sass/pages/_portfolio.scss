@@ -5,6 +5,12 @@
   margin-bottom: 40px;
   gap: 8px;
 
+  @include media-max(767px) {
+    &__item:first-child {
+      margin-bottom: 7px;
+    }
+  }
+
   @include media-min($tablet) {
     padding-right: 0;
     justify-content: center;

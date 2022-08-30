@@ -359,7 +359,7 @@ body {
 }
 @media screen and (min-width: 480px) {
   .social-menu__link {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 
@@ -476,9 +476,14 @@ body {
 }
 .form-popup__field--checkbox {
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 20px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .form-popup__field--checkbox {
+    justify-content: center;
+  }
 }
 
 .form-popup__label {
@@ -1122,6 +1127,11 @@ body {
   padding-right: 10px;
   margin-bottom: 40px;
   gap: 8px;
+}
+@media screen and (max-width: 767px) {
+  .filter__item:first-child {
+    margin-bottom: 7px;
+  }
 }
 @media screen and (min-width: 768px) {
   .filter {
