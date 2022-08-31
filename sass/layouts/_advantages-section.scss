@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   gap: 30px;
 
+  @include media-min($desktop) {
+    padding-bottom: 0;
+  }
+
   &__item {
     @include media-min($tablet) {
       width: calc((100% - 30px) / 2);
